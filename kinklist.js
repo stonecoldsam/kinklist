@@ -38,8 +38,6 @@ var level = {};
 
 $(function(){
 
-    var imgurClientId = '9db53e5936cd02f';
-
     $("#listType").change(function() {
         var $listType = $(this);
         $listType.prop('disabled', true);
@@ -181,41 +179,6 @@ $(function(){
 
             // Make export button work
             $('#Export').on('click', inputKinks.export);
-            $('#URL').on('click', function(){ this.select(); });
-            
-            // Make copy button work
-            $('#CopyURL').on('click', function(){
-                var $url = $('#URL');
-                var url = $url.val();
-                var $btn = $(this);
-                var originalText = $btn.text();
-                
-                // Try modern Clipboard API first
-                if (navigator.clipboard && window.isSecureContext) {
-                    navigator.clipboard.writeText(url).then(function() {
-                        $btn.text('Copied!');
-                        setTimeout(function(){ $btn.text(originalText); }, 2000);
-                    }).catch(function() {
-                        // Fallback to old method
-                        copyFallback($url, $btn, originalText);
-                    });
-                } else {
-                    // Fallback for older browsers or non-HTTPS
-                    copyFallback($url, $btn, originalText);
-                }
-            });
-            
-            function copyFallback($url, $btn, originalText) {
-                $url[0].select();
-                $url[0].setSelectionRange(0, 99999); // For mobile devices
-                try {
-                    document.execCommand('copy');
-                    $btn.text('Copied!');
-                    setTimeout(function(){ $btn.text(originalText); }, 2000);
-                } catch(e) {
-                    alert('Failed to copy URL. Please copy it manually.');
-                }
-            }
 
             // On resize, redo columns
             (function(){
@@ -343,9 +306,6 @@ $(function(){
                 username = '';
             }
 
-            $('#Loading').fadeIn();
-            $('#URL').fadeOut();
-
             // Constants
             var numCols = 6;
             var columnWidth = 250;
@@ -465,32 +425,34 @@ $(function(){
 
             //return $(canvas).insertBefore($('#InputList'));
 
-            // Send canvas to imgur
-            $.ajax({
-                url: 'https://api.imgur.com/3/image',
-                type: 'POST',
-                headers: {
-                    // Your application gets an imgurClientId from Imgur
-                    Authorization: 'Client-ID ' + imgurClientId,
-                    Accept: 'application/json'
-                },
-                data: {
-                    // convert the image data to base64
-                    image:  canvas.toDataURL().split(',')[1],
-                    type: 'base64'
-                },
-                success: function(result) {
-                    $('#Loading').hide();
-                    var url = 'https://i.imgur.com/' + result.data.id + '.png';
-                    $('#URL').val(url).fadeIn();
-                    $('#CopyURL').fadeIn();
-                },
-                error: function(xhr, status, error){
-                    $('#Loading').hide();
-                    console.error('Imgur upload failed:', status, error);
-                    alert('Failed to upload to imgur. Error: ' + (error || 'Could not connect') + '\n\nThe Imgur API client ID may need to be updated.');
-                }
-            });
+            // Download canvas as PNG
+            try {
+                canvas.toBlob(function(blob) {
+                    var url = URL.createObjectURL(blob);
+                    var link = document.createElement('a');
+                    link.download = 'kinklist_' + new Date().getTime() + '.png';
+                    link.href = url;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                    
+                    $('#ExportMessage')
+                        .text('✓ Image downloaded!')
+                        .css('color', '#4CAF50')
+                        .fadeIn()
+                        .delay(3000)
+                        .fadeOut();
+                }, 'image/png');
+            } catch(e) {
+                console.error('Download failed:', e);
+                $('#ExportMessage')
+                    .text('✗ Download failed. Please try again.')
+                    .css('color', '#920000')
+                    .fadeIn()
+                    .delay(3000)
+                    .fadeOut();
+            }
         },
         encode: function(base, input){
             var hashBase = inputKinks.hashChars.length;

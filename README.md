@@ -14,25 +14,25 @@ This is a fork of [adhesivecheese's kinklist](https://github.com/adhesivecheese/
 
 ## Improvements in This Fork
 
+- ✅ **Replaced Imgur upload with direct download** - No API keys needed, more privacy-friendly
 - ✅ Fixed export button infinite loading bug (jQuery error handler)
 - ✅ Added list type preservation in URL hash (classic/detailed/plsno)
 - ✅ Fixed hash restoration to properly load saved selections
 - ✅ Improved error handling for file loading and API calls
 - ✅ Added username validation and trimming
-- ✅ Added copy-to-clipboard button for exported URLs
 - ✅ Fixed critical Math.max/Math.ceil bug in hash decoding
 - ✅ Added bounds checking for selection values
 - ✅ Added loading states for list type changes
 - ✅ Better error messages and console logging
-- ✅ Made URL field read-only
+- ✅ Modern download functionality with user feedback
 
 ## Usage
 
 1. Select your preferred list type (Classic, Detailed, or Please Don't)
 2. Click through each kink category and select your preference level
 3. Your selections are automatically saved to the URL hash
-4. Click "Export" to generate a shareable image on Imgur
-5. Share the URL with your selections intact
+4. Click "Download Image" to save a PNG image to your computer
+5. Share the image however you like - upload to Discord, Imgur, or any other platform
 
 ## Hosting on GitHub Pages
 
