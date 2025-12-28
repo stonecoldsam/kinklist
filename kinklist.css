@@ -89,9 +89,10 @@ td + td { border-left-style:none }
 .legend-text { vertical-align:middle }
 
 #ExportWrapper {
-	width:460px;
-	height:60px;
-	position:relative
+	width:auto;
+	height:auto;
+	position:relative;
+	display:inline-block
 }
 
 #Export {
