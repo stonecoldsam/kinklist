@@ -99,15 +99,15 @@ td + td { border-left-style:none }
 	color:#FFF;
 	text-transform:uppercase;
 	background-color:#4980ae;
-	font-size:18px;
+	font-size:14px;
 	width:200px;
-	height:44px;
-	padding:10px 20px;
+	height:40px;
+	padding:8px 16px;
 	border-style:none;
 	border-radius:4px;
 	cursor:pointer;
 	transition:all .3s ease-in-out;
-	line-height:1.2
+	line-height:normal
 }
 
 #Export:hover { 
