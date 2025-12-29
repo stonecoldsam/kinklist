@@ -215,18 +215,17 @@ td + td { border-left-style:none }
 #InputList {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: flex-start;
 	gap: 10px;
 }
 
 .col {
-	flex: 1 1 auto;
+	flex: 1 1 350px;
 	box-sizing:border-box;
 	margin:0;
 	padding:5px;
 	min-width: 350px;
-	max-width: calc(50% - 10px);
 }
 
 /* Hide empty columns */
@@ -235,15 +234,14 @@ td + td { border-left-style:none }
 }
 
 /* Fallback for older browsers */
-.col.col25 { width:25%; max-width: 25%; }
+.col.col25 { width:25%; }
 
-.col.col33 { width:33.33333%; max-width: 33.33333%; }
+.col.col33 { width:33.33333%; }
 
-.col.col50 { width:50%; max-width: calc(50% - 10px); }
+.col.col50 { width:50%; }
 
 .col.col100 { 
 	width:100%; 
-	max-width: 100%;
 	padding:0
 }
 
