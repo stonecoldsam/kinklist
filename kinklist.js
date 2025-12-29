@@ -3,30 +3,11 @@
 
 // Configuration for conditional categories
 var conditionalCategories = {
-    'Watersports / Scat': { trigger: 'Pee/Urine', triggerCategory: 'Fluids' },
-    'General Surrealism': {
+    // Anal/Ass content
+    'Ass play': {
         triggers: [
-            { trigger: 'Transformation', triggerCategory: 'General' },
-            { trigger: 'Furry', triggerCategory: 'Fantasy Creatures' },
-            { trigger: 'Futanari/Futa', triggerCategory: 'Fantasy Creatures' },
-            { trigger: 'Monster or Alien', triggerCategory: 'Fantasy Creatures' },
-            { trigger: 'Tentacles', triggerCategory: 'Fantasy Creatures' }
-        ]
-    },
-    'Vore / Unbirth': { trigger: 'Vore', triggerCategory: 'General Surrealism' },
-    'Cum-related': { trigger: 'Cum', triggerCategory: 'Fluids' },
-    'BDSM & Related': {
-        triggers: [
-            { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
-            { trigger: 'Bondage (Light)', triggerCategory: 'Restrictive' },
-            { trigger: 'Bondage (Heavy)', triggerCategory: 'Restrictive' }
-        ]
-    },
-    'Blood & Gore / Torture / Death': { 
-        triggers: [
-            { trigger: 'Light pain', triggerCategory: 'Pain' },
-            { trigger: 'Heavy pain', triggerCategory: 'Pain' },
-            { trigger: 'Blood', triggerCategory: 'Fluids' }
+            { trigger: 'Hotdogging', triggerCategory: 'General' },
+            { trigger: 'Ass', triggerCategory: 'Bodies' }
         ]
     },
     // Genital-specific categories
@@ -40,7 +21,69 @@ var conditionalCategories = {
     // Body-part specific
     'Breast Play': { trigger: 'Breasts', triggerCategory: 'Bodies' },
     'Foreskin Play': { trigger: 'Uncut Cocks', triggerCategory: 'Bodies' },
-    'Foot Worship': { trigger: 'Feet', triggerCategory: 'Bodies' }
+    'Foot Worship': { trigger: 'Feet', triggerCategory: 'Bodies' },
+    // BDSM/Bondage
+    'Restrictive': { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+    'Toys': { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+    'BDSM & Related': {
+        triggers: [
+            { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+            { trigger: 'Bondage (Light)', triggerCategory: 'Restrictive' },
+            { trigger: 'Bondage (Heavy)', triggerCategory: 'Restrictive' }
+        ]
+    },
+    'Temperature Play': { trigger: 'Ice', triggerCategory: 'General' },
+    // Non-consent
+    'No consent': { trigger: 'Dubious consent', triggerCategory: 'General' },
+    // Taboo content
+    'Taboo': { trigger: 'Incest', triggerCategory: 'Roleplay Dynamics' },
+    // Fantasy/Surrealism
+    'Fantasy Creatures': { trigger: 'Monster or Alien', triggerCategory: 'General' },
+    'General Surrealism': {
+        triggers: [
+            { trigger: 'Gender Transformation', triggerCategory: 'General' },
+            { trigger: 'Furry', triggerCategory: 'Fantasy Creatures' },
+            { trigger: 'Futanari/Futa', triggerCategory: 'Fantasy Creatures' },
+            { trigger: 'Monster or Alien', triggerCategory: 'Fantasy Creatures' },
+            { trigger: 'Tentacles', triggerCategory: 'Fantasy Creatures' }
+        ]
+    },
+    'Vore / Unbirth': { trigger: 'Vore', triggerCategory: 'General Surrealism' },
+    // Fluids
+    'Fluids': {
+        triggers: [
+            { trigger: 'Swallowing', triggerCategory: 'Oral Sex' },
+            { trigger: 'Facials', triggerCategory: 'Oral Sex' }
+        ]
+    },
+    'Cum-related': { trigger: 'Cum', triggerCategory: 'Fluids' },
+    'Watersports / Scat': { trigger: 'Pee/Urine', triggerCategory: 'Fluids' },
+    // Degradation
+    'Degradation': {
+        triggers: [
+            { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+            { trigger: 'Dirty Talking', triggerCategory: 'General' }
+        ]
+    },
+    // Scents
+    'Scents & Smells': { trigger: 'Musk', triggerCategory: 'Misc. Fetish' },
+    // Pain/Torture
+    'Pain': {
+        triggers: [
+            { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+            { trigger: 'Biting', triggerCategory: 'General' },
+            { trigger: 'Scratching', triggerCategory: 'General' }
+        ]
+    },
+    'Blood & Gore / Torture / Death': { 
+        triggers: [
+            { trigger: 'Light pain', triggerCategory: 'Pain' },
+            { trigger: 'Heavy pain', triggerCategory: 'Pain' },
+            { trigger: 'Blood', triggerCategory: 'Fluids' }
+        ]
+    },
+    // Misc fetishes
+    'Misc. Fetish': { trigger: 'Photography/Videotaping', triggerCategory: 'General' }
 };
 
 var log = function(val, base) {

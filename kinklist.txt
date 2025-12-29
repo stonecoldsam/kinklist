@@ -132,6 +132,8 @@
 ? Sex which does not involve such elements as BDSM, kink, or fetish activities.
 * Consensual
 ? A preference for sexual interactions between characters in an RP to be fully consenting, by their characters' own free wills.
+* Dubious consent
+? Interest in situations where one partner's consent is in question, though not outright non-consensual.
 * Kissing
 ? Expresses an interest in kissing or being kissed by another character, typically denoting French kissing.
 * Cuddling
@@ -368,8 +370,6 @@
 
 #No consent
 (Aggressor, Target)
-* Dubious consent
-? situations where one partner's consent is in question, though not outright rape.
 * Non-con / rape
 ? taking/being taken against one's will, often through force
 * Blackmail / coercion
