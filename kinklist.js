@@ -28,7 +28,17 @@ var conditionalCategories = {
             { trigger: 'Heavy pain', triggerCategory: 'Pain' },
             { trigger: 'Blood', triggerCategory: 'Fluids' }
         ]
-    }
+    },
+    // Genital-specific categories
+    'Oral Sex': {
+        triggers: [
+            { trigger: 'Cocks', triggerCategory: 'Bodies' },
+            { trigger: 'Pussy', triggerCategory: 'Bodies' }
+        ]
+    },
+    'Vaginal': { trigger: 'Pussy', triggerCategory: 'Bodies' },
+    // Body-part specific
+    'Foot Worship': { trigger: 'Feet', triggerCategory: 'Bodies' }
 };
 
 var log = function(val, base) {
