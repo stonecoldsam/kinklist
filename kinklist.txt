@@ -186,6 +186,8 @@
 ? Form of non-penetrative sex in which a person rubs their vagina against a same-sex partner's body for sexual stimulation, in most cases vaginal-to-vaginal contact through scissoring.
 * Gender Transformation
 ? Changes to sex or gender, sometimes willing, sometimes unwilling. Encompasses both magical and sci-fi changes, as well as more realistic gender reassignment.
+* Gender Affirming Surgery / Sex Reassignment
+? Surgical procedures to alter primary and/or secondary sex characteristics, including but not limited to vaginoplasty, phalloplasty, breast augmentation/reduction, and other affirming procedures. May be part of transition or body modification scenarios.
 * Sexual Frustration
 ? Engaging in an RP in which at least one character is exceptionally desperate or horny and is often willing to eschew standard inhibitions in order to receive sexual stimulation.
 * Sexual Exhaustion
@@ -380,6 +382,12 @@
 ? The use of alcohol in the context of an RP, typically to disorientate or otherwise mentally incapacitate a character, or to elevate the sensations of sex.
 * Sleep play
 ? Engaging in sexual acts with an unconscious/asleep partner
+* Hypnosis
+? The use of hypnotic suggestion to influence, control, or remove a character's ability to resist, either through magical, technological, or psychological means.
+* Mind Control
+? Complete control over another character's thoughts, actions, or will through supernatural, technological, or chemical means, removing their autonomy.
+* Time Stop / Frozen Time
+? A scenario where time is frozen for everyone except one or more characters, allowing them to act freely while others are immobilized and unaware.
 
 #Taboo
 (General)
@@ -669,10 +677,22 @@
 ? Refers to the act of a character who, within the confines of the RP world has been designated to be in a relationship, will have sexual interaction with a character other than the one who has been predetermined to be in a relationship, in the context of the RP.
 * Shaving
 ? Engaging in the removal of fur/hair from a participant in an RP by the means of shaving.
+
+#Scents & Smells
+(Self, Partner)
 * Crotch Sniffing
 ? The act of receiving pleasure from inhaling the scent of the crotch, or receiving such actions. Emphasis is often placed on the musk and/or pheromone-related properties of the scent.
 * Musk
 ? Refers to an RP involving characters that are exceptionally musky; typically implies pheromones derived from the crotch, which may or may not lack hygiene to any degree.
+* Armpit/Body Scent
+? Attraction to natural body odor, particularly from armpits, emphasizing pheromones and natural musk from various body parts.
+* Scent Marking
+? Using natural scents or bodily fluids to mark territory or claim a partner, emphasizing the smell as a form of ownership or bonding.
+* Pheromones
+? Heightened attraction and arousal driven by natural or enhanced pheromones, sometimes to an exaggerated or supernatural degree.
+
+#Misc. Fetish
+(Actor, Subject)
 * Slob
 ? Characters without hygiene or uncaring of typical standards for cleanliness due to laziness, personal choice, or otherwise; may emphasize and derive pleasure from laziness or from actions linked with a lack of hygiene.
 * Food Play
@@ -796,8 +816,8 @@
 ? Engaging in an RP in which at least one character's genitals will be given negative attention, the intent of which to be to cause physical pain.
 * Castration
 ? An action where the testicles are removed or disabled, whether by surgical, chemical or magical means; sometimes also refers to removing or disabling the ovaries in those who have them.
-* Emasculation
-? The act whereby the genitalia are removed by magical or surgical means, usually the penis and/or the testicles. May also imply humiliation; e.g. to render a male less of a man.
+* Penectomy
+? The surgical or magical removal of the penis, sometimes including other genital tissue.
 * Nullification
 ? The removal of any body part.
 * Impalement
