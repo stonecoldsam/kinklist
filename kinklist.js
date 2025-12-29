@@ -8,7 +8,13 @@ var conditionalCategories = {
     'Vore / Unbirth': { trigger: 'Vore', triggerCategory: 'General Surrealism' },
     'Cum-related': { trigger: 'Cum play', triggerCategory: 'Fluids' },
     'BDSM & Related': { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
-    'Blood & Gore / Torture / Death': { trigger: 'Blood', triggerCategory: 'Fluids' }
+    'Blood & Gore / Torture / Death': { 
+        triggers: [
+            { trigger: 'Light pain', triggerCategory: 'Pain' },
+            { trigger: 'Heavy pain', triggerCategory: 'Pain' },
+            { trigger: 'Blood', triggerCategory: 'Fluids' }
+        ]
+    }
 };
 
 var log = function(val, base) {
@@ -144,6 +150,27 @@ $(function(){
             if(!inputKinks.isConditionalCategory(catName)) return true;
             
             var config = conditionalCategories[catName];
+            
+            // Handle multiple triggers (OR logic)
+            if(config.triggers && Array.isArray(config.triggers)) {
+                for(var t = 0; t < config.triggers.length; t++) {
+                    var triggerConfig = config.triggers[t];
+                    var triggerSelector = '.cat-' + strToClass(triggerConfig.triggerCategory) + 
+                                         ' .kink-' + strToClass(triggerConfig.trigger) + 
+                                         ' .choice.selected';
+                    var $selected = $(triggerSelector);
+                    
+                    if($selected.length > 0) {
+                        var levelInt = $selected.data('levelInt');
+                        if(levelInt !== 5) { // Not "Limit"
+                            return true; // Show if ANY trigger is selected as non-red
+                        }
+                    }
+                }
+                return false; // Hide if no triggers selected or all are red
+            }
+            
+            // Handle single trigger (original behavior)
             var triggerSelector = '.cat-' + strToClass(config.triggerCategory) + 
                                  ' .kink-' + strToClass(config.trigger) + 
                                  ' .choice.selected';
