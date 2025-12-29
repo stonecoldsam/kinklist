@@ -3,11 +3,17 @@
 
 // Configuration for conditional categories
 var conditionalCategories = {
-    'Watersports / Scat': { trigger: 'Watersports', triggerCategory: 'Fluids' },
+    'Watersports / Scat': { trigger: 'Pee/Urine', triggerCategory: 'Fluids' },
     'General Surrealism': { trigger: 'Transformation', triggerCategory: 'General' },
     'Vore / Unbirth': { trigger: 'Vore', triggerCategory: 'General Surrealism' },
-    'Cum-related': { trigger: 'Cum play', triggerCategory: 'Fluids' },
-    'BDSM & Related': { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+    'Cum-related': { trigger: 'Cum', triggerCategory: 'Fluids' },
+    'BDSM & Related': {
+        triggers: [
+            { trigger: 'Dominant / Submissive', triggerCategory: 'Domination' },
+            { trigger: 'Bondage (Light)', triggerCategory: 'Restrictive' },
+            { trigger: 'Bondage (Heavy)', triggerCategory: 'Restrictive' }
+        ]
+    },
     'Blood & Gore / Torture / Death': { 
         triggers: [
             { trigger: 'Light pain', triggerCategory: 'Pain' },
